@@ -38,26 +38,10 @@ class DrumPage extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('bongo');
-                      },
-                      child: Container(
-                        color: Colors.blueAccent,
-                      ),
-                    ),
+                    child: buildDrumPad('bongo', Colors.blueAccent),
                   ),
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('bip');
-                      },
-                      child: Container(
-                        color: Colors.redAccent,
-                      ),
-                    ),
+                    child: buildDrumPad('bip', Colors.redAccent),
                   ),
                 ],
               ),
@@ -66,26 +50,10 @@ class DrumPage extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('clap1');
-                      },
-                      child: Container(
-                        color: Colors.purpleAccent,
-                      ),
-                    ),
+                    child: buildDrumPad('clap1', Colors.purpleAccent),
                   ),
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('clap2');
-                      },
-                      child: Container(
-                        color: Colors.blueGrey,
-                      ),
-                    ),
+                    child: buildDrumPad('clap2', Colors.blueGrey),
                   ),
                 ],
               ),
@@ -94,26 +62,10 @@ class DrumPage extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('clap3');
-                      },
-                      child: Container(
-                        color: Colors.orange,
-                      ),
-                    ),
+                    child: buildDrumPad('clap3', Colors.orange),
                   ),
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('crash');
-                      },
-                      child: Container(
-                        color: Colors.lightBlueAccent,
-                      ),
-                    ),
+                    child: buildDrumPad('crash', Colors.lightBlueAccent),
                   ),
                 ],
               ),
@@ -122,32 +74,28 @@ class DrumPage extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('how');
-                      },
-                      child: Container(
-                        color: Colors.pinkAccent,
-                      ),
-                    ),
+                    child: buildDrumPad('how', Colors.pinkAccent),
                   ),
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: () {
-                        sesliCal('ridebel');
-                      },
-                      child: Container(
-                        color: Colors.brown,
-                      ),
-                    ),
+                    child: buildDrumPad('ridebel', Colors.brown),
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  FlatButton buildDrumPad(String ses, Color renk) {
+    return FlatButton(
+      padding: EdgeInsets.all(8),
+      onPressed: () {
+        sesliCal(ses);
+      },
+      child: Container(
+        color: renk,
       ),
     );
   }
